@@ -25,4 +25,70 @@ ORDER BY imdb_score DESC;
 ```
 <img width="460" height="226" alt="Ekran görüntüsü 2025-12-23 101216" src="https://github.com/user-attachments/assets/f10bbead-17b0-4d1f-b940-105df8fbae27" />
 
+#### 🎬 Top 10 Shows
+```sql
+SELECT TOP 10 title,type, imdb_score from titles
+WHERE imdb_score >= 8.0 
+AND type = 'SHOW'
+ORDER BY imdb_score DESC;
+```
+<img width="377" height="226" alt="Ekran görüntüsü 2025-12-23 101604" src="https://github.com/user-attachments/assets/e1af429e-4817-4747-90ce-e318b182098c" />
+
+#### 🎬 Bottom 10 Movies
+```sql
+SELECT TOP 10 title,type, imdb_score from titles
+WHERE imdb_score IS NOT NULL 
+AND type = 'MOVIE'
+ORDER BY imdb_score ASC;
+```
+<img width="424" height="230" alt="Ekran görüntüsü 2025-12-23 101853" src="https://github.com/user-attachments/assets/a5582353-0dab-4321-863d-1c0561e8d36b" />
+
+#### 🎬 Bottom 10 Shows
+```sql
+SELECT TOP 10 title,type, imdb_score from titles
+WHERE imdb_score IS NOT NULL 
+AND type = 'SHOW'
+ORDER BY imdb_score ASC
+```
+<img width="428" height="231" alt="Ekran görüntüsü 2025-12-23 102018" src="https://github.com/user-attachments/assets/5ad48568-c69d-4f38-9ebe-e27e4aa501e5" />
+
+IMDb ratings are commonly used as an indicator of how audiences perceive the quality and overall appeal of movies and TV shows. In this analysis, the top 10 titles distinguish themselves through consistently high IMDb scores, suggesting strong viewer approval and widespread positive reception. These productions tend to reflect compelling storytelling, strong performances, and higher production standards, making them attractive choices for audiences seeking well-regarded content within the Netflix library.
+
+Conversely, the bottom 10 movies and TV shows exhibit noticeably lower IMDb ratings, indicating weaker audience reception. Such outcomes may result from a variety of factors, including narrative limitations, inconsistent acting, or production quality issues. However, audience ratings are inherently subjective, and individual taste can significantly influence these scores.
+
+By examining both the highest- and lowest-rated titles, this analysis provides a balanced view of content performance on Netflix. The findings help identify productions that resonate strongly with viewers, as well as those that may benefit from further evaluation or improvement. These insights can support content discovery for viewers and inform data-driven strategies for enhancing recommendation systems and future content development.
+
+### 🎭 Which genres are the most common on Netflix?
+#### 🎬 Most Common Movie Genres
+```sql
+SELECT TOP 10 genres,
+COUNT(*) AS title_count FROM titles
+WHERE type = 'MOVIE'
+GROUP BY genres
+ORDER BY title_count DESC;
+```
+<img width="300" height="232" alt="Ekran görüntüsü 2025-12-23 102753" src="https://github.com/user-attachments/assets/1640be93-eee6-4a10-a999-a149fdf00c6e" />
+
+#### 🎬 Most Common Shows Genres
+```sql
+SELECT TOP 10 genres,
+COUNT(*)AS title_count FROM titles
+WHERE type = 'Show'
+GROUP BY genres
+ORDER BY title_count DESC;
+```
+<img width="274" height="230" alt="Ekran görüntüsü 2025-12-23 102911" src="https://github.com/user-attachments/assets/c5831095-1177-4104-ae0d-42b386c46c89" />
+
+#### 🎬 Top 3 most common genres OVERALL
+```sql
+SELECT TOP 3 t.genres, 
+COUNT(*) AS genre_count 
+FROM titles t
+WHERE t.type = 'MOVIE' or t.type = 'SHOW'
+GROUP BY t.genres
+ORDER BY genre_count DESC;
+```
+<img width="359" height="99" alt="Ekran görüntüsü 2025-12-23 103649" src="https://github.com/user-attachments/assets/6b2ca18d-62f3-482d-894a-c9d6f44109f2" />
+
+
 
