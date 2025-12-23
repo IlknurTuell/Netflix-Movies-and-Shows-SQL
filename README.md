@@ -3,6 +3,8 @@
 Excel, Microsoft SQL Server (SSMS)
 
 [Datasets Used](https://www.kaggle.com/datasets/victorsoeiro/netflix-tv-shows-and-movies?select=titles.csv)
+[SQL_Analysis_Code](https://github.com/IlknurTuell/Netflix-Movies-and-Shows-SQL/blob/main/Netflix_SQL_Analysis.sql)
+
 ## 📌 Problem Definition
 Digital streaming platforms generate massive volumes of data in order to evaluate the performance of their content and strategically expand their libraries. For a global platform like Netflix, failing to analyze this data effectively can lead to inaccurate assessments of content quality, overlooked audience preferences, and inefficient investment decisions.
 
