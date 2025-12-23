@@ -16,7 +16,7 @@ Data such as ratings, genres, release years, number of seasons, and cast informa
 ## 🛠️ Analytical Strategy
 The goal of this project is to examine Netflix’s content library from a data-driven perspective and build an analytical framework to evaluate content performance. To achieve this, SQL is used to systematically query movie and TV show data, establish relationships between tables, and derive summary metrics through analytical queries.
 
-## 🔍 Analytical Questions Explored in This Project
+## 🔍 Sample questions examined in this project
 
 ### 1. Which movies and TV shows rank among the top 10 and bottom 10 based on their IMDb ratings?
 
