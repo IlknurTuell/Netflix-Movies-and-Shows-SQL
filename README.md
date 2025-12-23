@@ -18,13 +18,10 @@ The goal of this project is to examine Netflix’s content library from a data-d
 
 #### 🎬 Top 10 Movies
 ```sql
-SELECT TOP 10
-    title,
-    type,
-    imdb_score
-FROM titles
-WHERE type = 'MOVIE'
-  AND imdb_score IS NOT NULL
+SELECT TOP 10 title,type, imdb_score from titles
+WHERE imdb_score >= 8.0 
+AND type = 'MOVIE'
 ORDER BY imdb_score DESC;
 
+<img width="460" height="226" alt="Ekran görüntüsü 2025-12-23 101216" src="https://github.com/user-attachments/assets/0543bc30-8d2b-43c9-b762-97a33390693e" />
 
