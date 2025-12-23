@@ -13,11 +13,18 @@ Data such as ratings, genres, release years, number of seasons, and cast informa
 The goal of this project is to examine Netflix’s content library from a data-driven perspective and build an analytical framework to evaluate content performance. To achieve this, SQL is used to systematically query movie and TV show data, establish relationships between tables, and derive summary metrics through analytical queries.
 
 ## 🔍 Analytical Questions Explored in This Project
-## 1.Which movies and TV shows rank among the top 10 and bottom 10 based on their IMDb ratings?
-- Top 10 Movies
-SELECT TOP 10 title,type, imdb_score from titles
-WHERE imdb_score >= 8.0 
-AND type = 'MOVIE'
+
+### 1. Which movies and TV shows rank among the top 10 and bottom 10 based on their IMDb ratings?
+
+#### 🎬 Top 10 Movies
+```sql
+SELECT TOP 10
+    title,
+    type,
+    imdb_score
+FROM titles
+WHERE type = 'MOVIE'
+  AND imdb_score IS NOT NULL
 ORDER BY imdb_score DESC;
 
 
