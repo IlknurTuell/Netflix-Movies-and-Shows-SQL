@@ -3,6 +3,7 @@
 Excel, Microsoft SQL Server (SSMS)
 
 [Datasets Used](https://www.kaggle.com/datasets/victorsoeiro/netflix-tv-shows-and-movies?select=titles.csv)
+
 [SQL_Analysis_Code](https://github.com/IlknurTuell/Netflix-Movies-and-Shows-SQL/blob/main/Netflix_SQL_Analysis.sql)
 
 ## 📌 Problem Definition
