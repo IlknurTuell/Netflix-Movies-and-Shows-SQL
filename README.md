@@ -58,7 +58,7 @@ Conversely, the bottom 10 movies and TV shows exhibit noticeably lower IMDb rati
 
 By examining both the highest- and lowest-rated titles, this analysis provides a balanced view of content performance on Netflix. The findings help identify productions that resonate strongly with viewers, as well as those that may benefit from further evaluation or improvement. These insights can support content discovery for viewers and inform data-driven strategies for enhancing recommendation systems and future content development.
 
-### 🎭 Which genres are the most common on Netflix?
+### 2.Which genres are the most common on Netflix?
 #### 🎬 Most Common Movie Genres
 ```sql
 SELECT TOP 10 genres,
@@ -89,6 +89,14 @@ GROUP BY t.genres
 ORDER BY genre_count DESC;
 ```
 <img width="359" height="99" alt="Ekran görüntüsü 2025-12-23 103649" src="https://github.com/user-attachments/assets/6b2ca18d-62f3-482d-894a-c9d6f44109f2" />
+An examination of genre frequencies provides clear insight into the types of content that are most prevalent on Netflix and the viewing preferences reflected in its catalog. Focusing first on movies, the analysis of the top ten most frequent genres shows that Comedy dominates the platform with 384 titles, highlighting its broad and consistent appeal to audiences. This is followed by Documentary with 230 movies and Drama with 224 movies, underscoring the strong presence of both informative and narrative-driven content within Netflix’s film library.
+
+Genre combinations play a notable role in the movie dataset. Categories such as Comedy–Documentary and Comedy–Drama rank prominently, demonstrating Netflix’s tendency to offer hybrid content that appeals to multiple audience interests simultaneously. Additional combinations including Drama–Romance, Drama–Comedy, and Comedy–Romance further indicate a clear preference for films that blend emotional storytelling with entertainment value. These results emphasize both the diversity of Netflix’s movie offerings and the platform’s strategic focus on cross-genre productions.
+
+Turning to TV shows, the genre distribution presents a slightly different pattern. Reality emerges as the most frequent category with 113 titles, reflecting strong viewer engagement with unscripted and lifestyle-based content. Drama follows closely with 104 shows, while Comedy and Documentary each account for 100 titles, illustrating a balanced mix of entertainment, storytelling, and informational programming. As observed in the movie analysis, genre combinations such as Comedy–Drama and Drama–Romance also appear among the most common, reinforcing the popularity of multi-genre formats in serialized content.
+
+When movies and TV shows are analyzed together, the overall results confirm Comedy as the most dominant genre on Netflix with 484 total entries. Documentary ranks second with 329 titles, highlighting sustained audience interest in factual and educational content, while Drama closely follows with 328 entries. Collectively, these findings demonstrate that Netflix’s content library is strongly centered around a core set of genres, while still maintaining variety through genre blending to accommodate diverse viewer preferences.
+
 
 
 
